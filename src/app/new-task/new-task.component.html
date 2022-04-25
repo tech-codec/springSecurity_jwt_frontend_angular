@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-9 col-md-offset-2">
+      <div class="alert alert-danger" *ngIf="mode==1">
+        <strong>Task enregistrée avec succes!</strong>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Ajouter une task</div>
+        <div class="panel-body">
+          <form #f="ngForm"  (ngSubmit)="addNewtask(f.value)">
+            <div class="form-group">
+              <label class="panel">TaskName</label>
+              <input name="taskName" ngModel type="text" class="form-control">
+            </div>
+            <button class="btn btn-danger" type="submit" required>register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
